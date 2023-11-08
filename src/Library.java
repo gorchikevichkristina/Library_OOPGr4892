@@ -7,7 +7,7 @@ import java.util.Map;
 
 //6) Создайте класс Library, который будет представлять библиотеку.
 // Этот класс должен содержать список элементов LibraryItem.
-public class Library {
+public class Library implements ILibraryItem {
     public static void main(String[] args) {
         Map<String, List<String>> Library = new HashMap<>();
 
@@ -21,4 +21,8 @@ public class Library {
         Library.computeIfAbsent(title, k -> new ArrayList<>()).add(author);
     }
 
+    @Override
+    public void getDescription() {
+
+    }
 }
